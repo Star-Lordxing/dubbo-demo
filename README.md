@@ -1,2 +1,2 @@
 # dubbo-demo
-dubbo简单调用示例
+dubbo调用示例
