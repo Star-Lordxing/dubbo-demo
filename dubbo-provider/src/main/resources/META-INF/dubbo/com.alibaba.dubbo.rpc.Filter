@@ -1,0 +1,1 @@
+traceFilter=com.dubbo.demo.Filter.ProviderTraceFilter

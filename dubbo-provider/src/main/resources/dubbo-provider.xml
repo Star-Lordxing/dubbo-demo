@@ -7,16 +7,15 @@
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-<!--dubbo应用程序命名-->
-<dubbo:application name="dubbo-demo-provider"/>
-
-<!--dubbo注册地址-->
-<dubbo:registry address="zookeeper://192.168.1.100:2181"/>
-
-<!--dubbo协议地址-->
-<dubbo:protocol name="dubbo" port="20880"/>
-
-<!--接口声明-->
-<dubbo:service interface="com.dubbo.demo.api.DemoRpcService" ref="demoRpcService"/>
-<bean id="demoRpcService" class="com.dubbo.demo.DemoRpcServiceImpl"/>
-</beans>
+    <!--过滤器配置-->
+    <dubbo:provider filter="traceFilter" />
+    <!--dubbo应用程序命名-->
+    <dubbo:application name="dubbo-demo-provider"/>
+    <!--dubbo注册地址-->
+    <dubbo:registry address="zookeeper://192.168.1.100:2181"/>
+    <!--dubbo协议地址-->
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <!--接口声明-->
+    <dubbo:service interface="com.dubbo.demo.api.DemoRpcService" ref="demoRpcService"/>
+        <bean id="demoRpcService" class="com.dubbo.demo.DemoRpcServiceImpl"/>
+    </beans>

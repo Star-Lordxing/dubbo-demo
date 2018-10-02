@@ -7,6 +7,9 @@
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
+    <!--过滤器配置-->
+    <dubbo:consumer filter="traceFilter" />
+
     <!--dubbo应用程序命名-->
     <dubbo:application name="dubbo-demo-provider"/>
 
